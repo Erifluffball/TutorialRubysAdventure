@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class NewBehaviourScript : MonoBehaviour
 {
+    public InputAction LeftAction;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +16,7 @@ public class NewBehaviourScript : MonoBehaviour
     void Update()
     {
         float horizontal = 0.0f;
+        float vertical = 0.0f;
         if (Keyboard.current.leftArrowKey.isPressed)
     {
 
@@ -27,11 +29,26 @@ public class NewBehaviourScript : MonoBehaviour
 
         }
 
+
+        if (Keyboard.current.upArrowKey.isPressed)
+    {
+
+    vertical = 1.0f;
+
+    } else if (Keyboard.current.downArrowKey.isPressed)
+        {
+
+        vertical = -1.0f;
+
+        }
+
 Debug.Log(horizontal);
+Debug.Log(vertical);
 
 
         Vector2 position = transform.position;
         position.x = position.x + 0.1f * horizontal;
+        position.y = position.y + 0.1f * vertical;
         transform.position = position;
     }
 }
