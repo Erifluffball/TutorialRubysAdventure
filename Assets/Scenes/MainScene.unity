@@ -236,6 +236,55 @@ MonoBehaviour:
       m_Action: Left
       m_Flags: 0
     m_Flags: 0
+  MoveAction:
+    m_Name: Move
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 2c674602-060b-4eaf-9080-7aaba65ab8de
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 2D Vector
+      m_Id: ca3f1d93-7db9-4c8a-bf04-6a12c2b882c4
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 4
+    - m_Name: up
+      m_Id: 479f03b5-2be5-4e1e-a4f6-f7c3e4efa74f
+      m_Path: <Keyboard>/upArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 8
+    - m_Name: down
+      m_Id: 346cbfd4-590c-445a-8926-cd6cf25379ea
+      m_Path: <Keyboard>/downArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 8
+    - m_Name: left
+      m_Id: 246f8939-4776-46ab-ac8a-10d487405152
+      m_Path: <Keyboard>/leftArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 8
+    - m_Name: right
+      m_Id: e1b5d63c-ffc2-4d47-aae9-2d5feab9d8bb
+      m_Path: <Keyboard>/rightArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 8
+    m_Flags: 0
 --- !u!1 &477032239
 GameObject:
   m_ObjectHideFlags: 0
