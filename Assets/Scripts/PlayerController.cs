@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     int currentHealth;
 
     // Variables related to temporary invincibility
-    public float timeInvincible = 1.0f;
+    public float timeInvincible = 0.5f;
     bool isInvincible;
     float damageCooldown;
     // Start is called before the first frame update
@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
 }
 
     currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-    Debug.Log(currentHealth + "/" + maxHealth);
+    UIHandler.instance.SetHealthValue(currentHealth / (float)maxHealth);
   }
 
 }
