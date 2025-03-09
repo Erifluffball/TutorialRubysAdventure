@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     //Movement related Variables
     public InputAction MoveAction;
+    public InputAction talkAction;
     Rigidbody2D rigidbody2d;
     Vector2 move;
     public float speed = 3.0f;
@@ -29,6 +30,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         MoveAction.Enable();
+        talkAction.Enable();
         rigidbody2d = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
         animator = GetComponent<Animator>();
@@ -64,6 +66,11 @@ if(Input.GetKeyDown(KeyCode.C))
        {
           Launch();
        }
+       
+       if (Input.GetKeyDown(KeyCode.X))
+        {
+           FindFriend();
+        }
     }
 
     void FixedUpdate()
@@ -96,5 +103,18 @@ if(Input.GetKeyDown(KeyCode.C))
 projectile.Launch(moveDirection, 300);
 animator.SetTrigger("Launch");
   }
+
+  void FindFriend()
+{
+        RaycastHit2D hit = Physics2D.Raycast(rigidbody2d.position + Vector2.up * 0.2f, moveDirection, 1.5f, LayerMask.GetMask("NPC"));
+        if (hit.collider != null)
+        {
+            NonPlayerCharacter character = hit.collider.GetComponent<NonPlayerCharacter>();
+            if (character != null)
+            {
+                UIHandler.instance.DisplayDialogue();
+            }
+        }
+    }
 
 }
