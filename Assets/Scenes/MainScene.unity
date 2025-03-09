@@ -10716,6 +10716,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!198 &786776447 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5839693908027052001, guid: 5fa0e664065726f41bdfd6a24b23f25c, type: 3}
+  m_PrefabInstance: {fileID: 2902205067194379487}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1007063091
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11533,6 +11538,10 @@ PrefabInstance:
       propertyPath: vertical
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7730938731481775662, guid: 5fa0e664065726f41bdfd6a24b23f25c, type: 3}
+      propertyPath: smokeEffect
+      value: 
+      objectReference: {fileID: 786776447}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
